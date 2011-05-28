@@ -1,0 +1,3 @@
+#!/bin/bash
+rm test.fs
+python create_fs.py test.fs

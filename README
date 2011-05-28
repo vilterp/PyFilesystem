@@ -1,0 +1,25 @@
+PyFilesystem
+
+Create a filesystem:
+
+$ python create_fs.py myfs.fs
+
+Browse it with a bash-like shell:
+
+$ python shell.py myfs.fs
+myfs.fs@/$ write hello.txt "hello world"
+myfs.fs@/$ read hello.txt
+hello world
+myfs.fs@/$ ls
+hello.txt (11.0bytes)
+myfs.fs@/$ mkdir baz
+myfs.fs@/$ cd baz
+myfs.fs@/baz$ write foo.txt "foo bar baz"
+myfs.fs@/baz$ cd ..
+myfs.fs@/$ tree
+hello.txt
+baz/
+  foo.txt
+myfs.fs@/$
+
+Or, use the Python API in fs.py (not really documented, just use Python's built-in help system).
